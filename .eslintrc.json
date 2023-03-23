@@ -21,5 +21,6 @@
         "sourceType": "module"
     },
     "rules": {
+        "capitalized-comments": "off"
     }
 }
