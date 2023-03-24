@@ -3,6 +3,10 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 
+const dotenv = require('dotenv');
+
+dotenv.config();
+
 const isProduction = process.env.NODE_ENV === 'production';
 
 const serverConfig = {
