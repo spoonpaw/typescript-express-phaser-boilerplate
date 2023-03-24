@@ -23,9 +23,7 @@ To extend the boilerplate, you can modify the webpack configuration files locate
 
 - `webpack.client.config.js`: The client-side webpack configuration.
 - `webpack.server.config.js`: The server-side webpack configuration.
+- `tsconfig.client.json`: The TypeScript compiler options for the client.
+- `tsconfig.server.json`: The TypeScript compiler options for the server.
 
-You can also modify the `tsconfig.json` file to change the TypeScript compiler options.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+You can also modify the `tsconfig.json` file to change the common TypeScript compiler options.

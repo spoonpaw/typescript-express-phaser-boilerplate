@@ -15,7 +15,14 @@ const serverConfig = {
 		rules: [
 			{
 				test: /\.ts$/,
-				use: 'ts-loader',
+				use: [
+					{
+						loader: 'ts-loader',
+						options: {
+							configFile: 'tsconfig.server.json',
+						},
+					},
+				],
 				exclude: /node_modules/,
 			},
 		],
