@@ -1,6 +1,10 @@
+// src/client/scenes/MainScene.ts
+
+import {io, type Socket} from 'socket.io-client';
 import BouncingImage from '../classes/BouncingImage';
 
 export default class MainScene extends Phaser.Scene {
+	private socket!: Socket;
 	private image!: BouncingImage;
 	private width!: number;
 	private height!: number;
@@ -16,6 +20,7 @@ export default class MainScene extends Phaser.Scene {
 
 	// Scene creation function
 	create() {
+		this.socket = io();
 		this.width = Number(this.game.config.width);
 		this.height = Number(this.game.config.height);
 		this.image = new BouncingImage(this, 400, 300, 'head');
