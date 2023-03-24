@@ -23,5 +23,19 @@ const config: Phaser.Types.Core.GameConfig = {
 };
 
 // Create a new Phaser game instance using the specified configuration object
-(() => new Phaser.Game(config))();
+let game: Phaser.Game;
+
+/**
+ * Initializes and starts the game when the window is loaded.
+ */
+window.addEventListener('load', () => {
+	game = new Phaser.Game(config);
+});
+
+/**
+ * Destroys the game instance before the window is unloaded.
+ */
+window.addEventListener('beforeunload', () => {
+	game.destroy(true, false);
+});
 
