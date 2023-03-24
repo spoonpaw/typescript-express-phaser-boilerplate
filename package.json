@@ -11,23 +11,22 @@
     "client:watch": "webpack --config webpack.client.config.js --watch --mode development",
     "server:watch": "webpack --config webpack.server.config.js --watch --mode development",
     "server:run": "nodemon dist/server/index.js",
-    "dev": "npm-run-all --parallel client:watch server:watch server:run"
+    "dev": "npm run build && concurrently \"npm run client:watch\" \"npm run server:watch\" \"npm run server:run\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^7.6.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "phaser": "^3.55.2",
     "ts-loader": "^9.4.2",
-    "ts-node": "^10.9.1",
     "webpack": "^5.76.3",
     "webpack-cli": "^5.0.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
-    "@types/node": "^18.15.5",
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
     "copy-webpack-plugin": "^11.0.0",
