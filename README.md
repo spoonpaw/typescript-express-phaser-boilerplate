@@ -1,6 +1,8 @@
 # TypeScript-Express-Phaser Boilerplate
 
-This is a simple boilerplate template using Node.js, Express, Webpack, and Phaser for creating browser games using TypeScript.
+This is a simple boilerplate template using Node.js, Express, Webpack, Phaser, and Socket.IO for creating browser games using TypeScript.
+
+Art used in this project is credited to Lynn Tobin (https://www.instagram.com/lynn.tobin/?hl=en). 
 
 ## How to Use
 
